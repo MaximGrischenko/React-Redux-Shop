@@ -1,0 +1,52 @@
+.root {
+  flex: 1 0 auto;
+  margin: 20px auto;
+  width: calc(100% - 16px);
+}
+
+.editorActions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.actionArea {
+  margin: 20px 0 20px 10px;
+  width: 250px;
+  height: 300px;
+  display: flex;
+}
+
+.uploadArea {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardContent {
+  display: flex;
+  flex-grow: 1;
+}
+
+.grow {
+  width: 100%;
+}
+
+.imagePreview {
+  width: 250px;
+  height: 290px;
+  object-fit: contain;
+}
+
+.formControls {
+  display: flex;
+  justify-content: flex-end;
+}

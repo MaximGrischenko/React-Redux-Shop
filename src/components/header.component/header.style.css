@@ -1,0 +1,29 @@
+.appBar {
+  padding: 5px 0;
+}
+
+.row {
+  justify-content: space-between;
+}
+
+.signIn {
+  display: flex;
+  align-items: center;
+}
+
+.userBar {
+  display: flex;
+  align-items: center;
+}
+
+.userName {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.userAvatar {
+  margin-right: 15px;
+  font-size: 40px;
+}

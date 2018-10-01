@@ -1,0 +1,47 @@
+.root {
+  flex: 1 0 auto;
+  margin: 20px auto;
+  max-width: calc(100% - 16px);
+}
+
+.progress {
+  display: flex;
+  justify-content: center;
+}
+
+.productActions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card {
+  height: 100%;
+}
+
+.cardControls {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
+}
+
+.actionArea {
+  padding: 10px 0;
+  height: 100%;
+  display: flex;
+  text-align: inherit;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.imagePreview {
+  max-width: 100%;
+  height: auto;
+  max-height: 250px;
+}
