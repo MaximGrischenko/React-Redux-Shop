@@ -1,7 +1,7 @@
 .root {
   flex: 1 0 auto;
   margin: 20px auto;
-  max-width: calc(100% - 16px);
+  width: calc(100% - 16px);
 }
 
 .progress {
