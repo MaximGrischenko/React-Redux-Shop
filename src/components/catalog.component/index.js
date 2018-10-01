@@ -12,8 +12,9 @@ class CatalogComponent extends Component {
   }
 
   componentDidMount() {
-    const { fetchProducts } = this.props;
-    fetchProducts();
+    if (!this.props.isReady) {
+      this.props.fetchProducts();
+    }
   }
 
   render() {
