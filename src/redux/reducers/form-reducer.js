@@ -21,7 +21,11 @@ export default function (state = initialState, action) {
       };
     case types.CLEAR_FORM_FIELDS:
       return {
-        ...initialState
+        ...state,
+        form: {
+          ...state.from,
+          ...initialState.form,
+        }
       };
     default:
       return state;

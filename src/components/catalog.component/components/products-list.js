@@ -9,8 +9,8 @@ const ProductsList = ({ products, isAdmin, onDeleteProduct }) => {
     <div className={styles.root}>
       <Grid container spacing={8}>
         {
-          products.map(product => (
-            <Grid item key={product.id} xs={12} md={3} sm={6} >
+          products.map((product, i) => (
+            <Grid item key={i} xs={12} md={3} sm={6} >
               <ProductCard {...product} isAdmin={isAdmin} onDeleteProduct={onDeleteProduct}/>
             </Grid>
           ))

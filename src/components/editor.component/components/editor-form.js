@@ -19,7 +19,7 @@ class EditorForm extends Component {
     super(props);
 
     this.onSelectFile = this.onSelectFile.bind(this);
-    EditorForm.onHandleSubmit = EditorForm.onHandleSubmit.bind(this);
+    this.onHandleSubmit = this.onHandleSubmit.bind(this);
   }
 
   onSelectFile(event) {
@@ -33,18 +33,10 @@ class EditorForm extends Component {
     }
   }
 
-  static onHandleSubmit(event) {
+  onHandleSubmit(event) {
     event.preventDefault();
 
-    const Product = {
-      id: IDgenerator(),
-      title: this.props.formData.title,
-      price: this.props.formData.price,
-      image: this.props.formData.image,
-      description: this.props.formData.description,
-    };
-
-    this.props.onAddProduct(Product);
+    this.props.onAddProduct({id: IDgenerator(), ...this.props.formData});
     this.props.onClearFormFields();
   }
 
@@ -73,7 +65,7 @@ class EditorForm extends Component {
           </Paper>
         </CardActionArea>
         <CardContent className={styles.cardContent}>
-          <form className={styles.grow} noValidate autoComplete="off" onSubmit={EditorForm.onHandleSubmit}>
+          <form className={styles.grow} noValidate autoComplete="off" onSubmit={this.onHandleSubmit}>
             <TextField
               label="Title"
               placeholder="Title"
@@ -104,7 +96,7 @@ class EditorForm extends Component {
               }}
               margin="normal"
               variant="outlined"
-              onChange={(event) => onStoreFormFields('price', +event.target.value)}
+              onChange={(event) => onStoreFormFields('price', +(event.target.value))}
             />
             <div className={styles.formControls}>
               <Button type="submit">Save</Button>
